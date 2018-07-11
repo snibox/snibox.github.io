@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+yarn website:build
+
+cp README.md website/.vuepress/dist
+
+cd website/.vuepress/dist
+git add -A
+git commit -m 'Deploy'
+
+git push -f git@github.com:snibox/snibox.github.io.git master
+
+cd -

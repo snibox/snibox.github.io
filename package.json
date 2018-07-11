@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "website:dev": "vuepress dev website",
+    "website:build": "vuepress build website"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.2",
+    "octicons": "^7.4.0",
+    "sass-loader": "^7.0.3",
+    "vuepress": "^0.11.0"
+  }
+}
