@@ -75,7 +75,8 @@
         delay = delay + component.animation.delay
         setTimeout(() => {
           selectors.forEach(selector => {
-            component.$el.querySelector(selector).style.display = 'block'
+            selector === '.features.animated' ? component.$el.querySelector(selector).style.display = 'flex' :
+                component.$el.querySelector(selector).style.display = 'block'
           })
         }, delay)
       })
