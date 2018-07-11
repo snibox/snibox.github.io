@@ -1,5 +1,6 @@
 module.exports = {
   title: 'Snibox',
+  description: 'Self-hosted code snippets manager',
   base: '',
   themeConfig: {
     nav: [
