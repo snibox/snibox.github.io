@@ -1,6 +1,9 @@
 module.exports = {
   title: 'Snibox',
-  description: 'Self-hosted code snippets manager',
+  description: 'Self-hosted code snippets manager.',
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.png' }]
+  ],
   base: '',
   themeConfig: {
     nav: [

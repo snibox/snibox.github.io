@@ -4,9 +4,11 @@
     "website:build": "vuepress build website"
   },
   "devDependencies": {
+    "animate.css": "^3.6.1",
+    "imagesloaded": "^4.1.4",
     "node-sass": "^4.9.2",
     "octicons": "^7.4.0",
     "sass-loader": "^7.0.3",
-    "vuepress": "^0.11.0"
+    "vuepress": "^0.10.2"
   }
 }
