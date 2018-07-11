@@ -168,6 +168,7 @@
       border-top: 1px solid $borderColor;
       color: lighten($textColor, 25%);
       padding: 2.5rem;
+      margin-top: 2.5rem;
       text-align: center;
     }
   }
@@ -254,7 +255,9 @@
           }
         }
       }
+    }
 
+    .home-container {
       .footer {
         margin-top: 1.5rem;
       }
