@@ -1,43 +1,43 @@
 <template>
 
-  <div class="home-container">
+  <div class="home-container" v-show="animation.ready">
     <div class="home">
       <div class="hero">
-        <h1 class="animated fadeInLeft" style="display: none;">Snibox</h1>
-        <p class="description animated fadeInRight" style="display: none;">
+        <h1 class="animated fadeInLeft">Snibox</h1>
+        <p class="description animated fadeInRight">
           Self-hosted code snippets manager
         </p>
-        <p class="action animated fadeInLeft" style="display: none;">
+        <p class="action animated fadeInLeft">
           <a class="action-button demo" href="https://snibox-demo.herokuapp.com/" target="_blank">
             <span v-html="logos.demo"></span>Demo
           </a>
           <a class="action-button github" href="https://github.com/snibox/snibox" target="_blank">
-            <span v-html="logos.github"></span>Source
+            <span v-html="logos.github"></span>Github
           </a>
           <router-link class="action-button docs" to="/docs/"><span v-html="logos.docs"></span>Docs</router-link>
         </p>
-        <img class="animated fadeInUp" style="display: none;"
+        <img class="animated fadeInUp"
              src="https://user-images.githubusercontent.com/312873/41824011-dc6d33a0-7811-11e8-94bd-1cf2ede595b5.png"
              alt="Image">
       </div>
 
-      <div class="features animated fadeIn" style="display: none;">
+      <div class="features animated fadeIn">
         <div class="feature">
           <h2>Open source</h2>
-          <p>Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a></p>
+          <p>Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License.</a></p>
         </div>
         <div class="feature">
           <h2>Self-hosted</h2>
-          <p>Many ways to deploy including <a href="https://github.com/snibox/snibox-docker" target="_blank">Docker</a>
+          <p>Many ways to deploy including <a href="https://github.com/snibox/snibox-docker" target="_blank">Docker.</a>
           </p>
         </div>
         <div class="feature">
           <h2>Simple attractive UI</h2>
-          <p>Label-oriented interface</p>
+          <p>Label-oriented interface.</p>
         </div>
       </div>
 
-      <div class="built-with animated fadeIn" style="display: none;">
+      <div class="built-with animated fadeIn">
         <h1>Built with</h1>
         <div class="features">
           <div class="feature">
@@ -58,7 +58,7 @@
         </div>
       </div>
     </div>
-    <div class="footer animated fadeIn" style="display: none;">
+    <div class="footer animated fadeIn">
       <a href="https://opensource.org/licenses/MIT">MIT Licensed</a> | Copyright © 2018-present, Snibox
     </div>
   </div>
@@ -73,15 +73,13 @@
       let delay = -component.animation.delay
       component.animation.order.forEach(selectors => {
         delay = delay + component.animation.delay
-        setTimeout(() => {
-          selectors.forEach(selector => {
-            selector === '.features.animated' ? component.$el.querySelector(selector).style.display = 'flex' :
-                component.$el.querySelector(selector).style.display = 'block'
-          })
-        }, delay)
+        selectors.forEach(selector => {
+          component.$el.querySelector(selector).style['animation-delay'] = delay / 1000 + 's'
+        })
       })
     }
     component.animation.rendered = true
+    component.animation.ready = true
   }
 
   export default {
@@ -102,6 +100,7 @@
             ['.features.animated', '.built-with.animated', '.footer.animated']
           ],
           delay: 300,
+          ready: false,
           rendered: false
         }
       }
@@ -131,7 +130,7 @@
   $blue: #337ab7;
   $gray: #fcfcfc;
   $green: #3eaf7c;
-  $white: #fff;
+  $white: #ffffff;
 
   /* vuepress responsive breakpoints */
   $MQNarrow: 959px;
@@ -140,6 +139,15 @@
 
   /* custom breakpoints */
   $tablet: 769px;
+
+  @mixin action-button($color) {
+    background: $color;
+    border: 1px solid darken($color, 10%);
+
+    &:hover {
+      background: darken($color, 10%);
+    }
+  }
 
   .animated {
     animation-duration: .4s;
@@ -180,33 +188,21 @@
         padding: 0.6rem 1.2rem;
 
         &.github {
-          background: $blue;
-          border: 1px solid darken($blue, 10%);
-
-          &:hover {
-            background: darken($blue, 10%);
-          }
+          @include action-button($blue);
         }
 
         &.demo {
+          @include action-button($blue);
           background: none;
-          border: 1px solid darken($blue, 10%);
           color: $blue;
 
           &:hover {
-            background: darken($blue, 10%);
             color: $white;
           }
         }
 
         &.docs {
-          background: $green;
-          border: 1px solid darken($green, 10%);
-
-          &:hover {
-            background: darken($green, 10%);
-            color: $white;
-          }
+          @include action-button($green);
         }
       }
 
