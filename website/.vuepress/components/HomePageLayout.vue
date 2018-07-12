@@ -64,7 +64,8 @@
       </div>
     </div>
     <div class="footer animated fadeIn">
-      <a href="https://opensource.org/licenses/MIT">MIT Licensed</a> | Copyright © 2018-present, Snibox
+      Released under the <a href="https://opensource.org/licenses/MIT">MIT License</a><br/><br/>
+      Copyright © 2018-present, Snibox
     </div>
   </div>
 </template>
