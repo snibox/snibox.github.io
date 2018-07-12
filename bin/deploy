@@ -1,6 +1,6 @@
 #/bin/bash
 
-yarn website:build
+#yarn website:build
 
 cp -r ./website/.vuepress/dist/. ../master/
 
