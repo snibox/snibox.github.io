@@ -5,7 +5,7 @@
       <div class="hero">
         <h1 class="animated fadeInLeft">Snibox</h1>
         <p class="description animated fadeInRight">
-          Self-hosted code snippets manager
+          Self-hosted snippet manager. Developed to collect and organize code snippets.
         </p>
         <p class="action animated fadeInLeft">
           <a class="action-button demo" href="https://snibox-demo.herokuapp.com/" target="_blank">
@@ -24,21 +24,26 @@
       <div class="features animated fadeIn">
         <div class="feature">
           <h2>Open source</h2>
-          <p>Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License.</a></p>
+          <p>
+            Released under the <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License.</a>
+            Permission is hereby granted, free of charge, to any person obtaining a copy of this software.
+          </p>
         </div>
         <div class="feature">
           <h2>Self-hosted</h2>
-          <p>Many ways to deploy including <a href="https://github.com/snibox/snibox-docker" target="_blank">Docker.</a>
+          <p>Many ways to deploy including <a href="https://github.com/snibox/snibox-docker" target="_blank">Docker</a>,
+            easy deploy to <a href="https://snibox.github.io/docs/deployment.html#heroku" target="_blank">Heroku</a>
+            and classic deploy to <a href="https://snibox.github.io/docs/deployment.html#ubuntu" target="_blank">Ubuntu</a>.
           </p>
         </div>
         <div class="feature">
           <h2>Simple attractive UI</h2>
-          <p>Label-oriented interface.</p>
+          <p>Label-oriented interface. Supports various programming languages, markdown, plain text.</p>
         </div>
       </div>
 
       <div class="built-with animated fadeIn">
-        <h1>Built with</h1>
+        <h1 class="features-title">Built with</h1>
         <div class="features">
           <div class="feature">
             <a href="https://vuejs.org" target="_blank">
@@ -162,6 +167,14 @@
     margin-right: 0.5rem;
   }
 
+  h1 {
+    &.features-title {
+      border-bottom: 1px solid $borderColor;
+      padding-bottom: 0.5rem;
+      text-align: left;
+    }
+  }
+
   .built-with {
     text-align: center;
 
@@ -183,26 +196,40 @@
 
   .home {
     .hero {
-      .action-button {
-        margin: 0 1rem;
-        padding: 0.6rem 1.2rem;
+      .action {
+        display: flex;
+        justify-content: center;
 
-        &.github {
-          @include action-button($blue);
-        }
+        .action-button {
+          display: flex;
+          align-items: center;
+          margin: 0 1rem;
+          padding: 0.6rem 1.2rem;
+          font-size: 1rem;
+          text-transform: uppercase;
 
-        &.demo {
-          @include action-button($blue);
-          background: none;
-          color: $blue;
-
-          &:hover {
-            color: $white;
+          span {
+            position: relative;
+            bottom: 2px;
           }
-        }
 
-        &.docs {
-          @include action-button($green);
+          &.github {
+            @include action-button($blue);
+          }
+
+          &.demo {
+            @include action-button($blue);
+            background: none;
+            color: $blue;
+
+            &:hover {
+              color: $white;
+            }
+          }
+
+          &.docs {
+            @include action-button($green);
+          }
         }
       }
 
@@ -235,9 +262,13 @@
           max-width: 100%;
         }
 
-        .action-button {
-          display: block;
-          margin: 0 2.5rem 1.5rem;
+        .action {
+          flex-direction: column;
+
+          .action-button {
+            margin: 0 2.5rem 1.5rem;
+            justify-content: center;
+          }
         }
       }
 
@@ -264,6 +295,20 @@
     .octicon {
       height: 20px;
       width: 20px;
+    }
+
+    .home {
+      .hero {
+        .action {
+          flex-direction: column;
+
+          .action-button {
+            span {
+              bottom: 0;
+            }
+          }
+        }
+      }
     }
   }
 </style>
