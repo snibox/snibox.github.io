@@ -12,7 +12,7 @@
             <span v-html="logos.demo"></span>Demo
           </a>
           <a class="action-button github" href="https://github.com/snibox/snibox" target="_blank">
-            <span v-html="logos.github"></span>Github
+            <span v-html="logos.github"></span>GitHub
           </a>
           <router-link class="action-button docs" to="/docs/"><span v-html="logos.docs"></span>Docs</router-link>
         </p>
@@ -159,7 +159,7 @@
     fill: currentColor;
     height: 24px;
     width: 24px;
-    margin-right: 5px;
+    margin-right: 0.5rem;
   }
 
   .built-with {

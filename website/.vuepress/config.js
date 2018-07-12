@@ -10,7 +10,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Demo', link: 'https://snibox-demo.herokuapp.com/' },
-      { text: 'Github', link: 'https://github.com/snibox/snibox/' },
+      { text: 'GitHub', link: 'https://github.com/snibox/snibox/' },
       { text: 'Docs', link: '/docs/' }
     ],
     sidebar: [
