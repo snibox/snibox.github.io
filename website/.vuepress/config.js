@@ -6,12 +6,12 @@ module.exports = {
     ['meta', { property: 'og:type', content: 'article' }],
     ['meta', { property: 'og:title', content: 'Snibox' }],
     ['meta', { property: 'og:description', content: 'A self-hosted snippet manager' }],
-    ['meta', { property: 'og:image', content: '/logo.png' }],
+    ['meta', { property: 'og:image', content: 'https://snibox.github.io/logo.png' }],
 
     ['meta', { name: 'twitter:card', content: 'summary' }],
     ['meta', { name: 'twitter:title', content: 'Snibox' }],
     ['meta', { name: 'twitter:description', content: 'A self-hosted snippet manager' }],
-    ['meta', { name: 'twitter:image', content: '/logo.png' }],
+    ['meta', { name: 'twitter:image', content: 'https://snibox.github.io/logo.png' }],
 
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icons/apple-touch-icon.png' }],
     ['link', { rel: 'apple-touch-icon', sizes: '57x57', href: '/apple-touch-icons/apple-touch-icon-57x57.png' }],
