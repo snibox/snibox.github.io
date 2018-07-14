@@ -6,12 +6,12 @@ module.exports = {
     ['meta', { property: 'og:type', content: 'article' }],
     ['meta', { property: 'og:title', content: 'Snibox' }],
     ['meta', { property: 'og:description', content: 'A self-hosted snippet manager' }],
-    ['meta', { property: 'og:image', content: 'https://snibox.github.io/logo.png' }],
+    ['meta', { property: 'og:image', content: 'https://snibox.github.io/assets/img/logo.png' }],
 
     ['meta', { name: 'twitter:card', content: 'summary' }],
     ['meta', { name: 'twitter:title', content: 'Snibox' }],
     ['meta', { name: 'twitter:description', content: 'A self-hosted snippet manager' }],
-    ['meta', { name: 'twitter:image', content: 'https://snibox.github.io/logo.png' }],
+    ['meta', { name: 'twitter:image', content: 'https://snibox.github.io/assets/img/logo.png' }],
 
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icons/apple-touch-icon.png' }],
     ['link', { rel: 'apple-touch-icon', sizes: '57x57', href: '/apple-touch-icons/apple-touch-icon-57x57.png' }],
@@ -23,7 +23,7 @@ module.exports = {
     ['link', { rel: 'apple-touch-icon', sizes: '152x152', href: '/apple-touch-icons/apple-touch-icon-152x152.png' }],
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icons/apple-touch-icon-180x180.png' }],
 
-    ['link', { rel: 'icon', href: '/favicon.png' }]
+    ['link', { rel: 'icon', href: '/assets/img/favicon.png' }]
   ],
   ga: 'UA-122253325-1',
   themeConfig: {
