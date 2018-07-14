@@ -75,7 +75,7 @@
   import imagesLoaded from 'imagesloaded'
 
   const processAnimation = (component) => {
-    if (!component.animation.rendered) {
+    if (!component.animation.ready) {
       let delay = -component.animation.delay
       component.animation.order.forEach(selectors => {
         delay = delay + component.animation.delay
@@ -84,7 +84,6 @@
         })
       })
     }
-    component.animation.rendered = true
     component.animation.ready = true
   }
 
@@ -106,8 +105,7 @@
             ['.features.animated', '.built-with.animated', '.footer.animated']
           ],
           delay: 300,
-          ready: false,
-          rendered: false
+          ready: false
         }
       }
     },
@@ -117,10 +115,10 @@
         processAnimation(this)
       })
 
-      // don't wait images more than 5 seconds
+      // don't wait images more than 3 seconds
       setTimeout(() => {
         processAnimation(this)
-      }, 5000)
+      }, 3000)
     }
   }
 </script>
