@@ -3,7 +3,9 @@
 ### Guides for various platforms
 * [Docker](#docker)
 * [Heroku](#heroku)
+* [macOS](#macos)
 * [Ubuntu](#ubuntu)
+* [Windows](#windows)
 
 ### Emails
 Snibox uses [Mailgun](https://www.mailgun.com/) to send emails on production. You need them just for 'reset password' feature.
@@ -20,34 +22,46 @@ Click the button below to deploy project:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/snibox/snibox)
 
-## Ubuntu 
-It's similar to [Ubuntu development guide](development.html#ubuntu). 
+## macOS
+1. Setup [macOS environment](setup-environment.html#macos).
 
-1. Just a few additions before setup database (step 15):
+2. Follow steps ```2-7``` from [Ubuntu deployment guide](deployment.html#ubuntu).
+
+
+## Ubuntu 
+1. Setup [Ubuntu environment](setup-environment.html#ubuntu).
+
+2. Copy ```.env``` file:
 ```
 cp .env.production.sample .env
 ```
 
-2. Generate secret key:
+3. Generate secret key:
 ```
 rake secret
 ```
 
-3. Insert into `.env` file generated secret and adjust database credentials from .env file if needed.
+4. Insert into `.env` file generated secret and adjust database credentials if needed.
 
-4. Then setup database:
+5. Setup database:
 ```
 RAILS_ENV=production ./bin/rake db:setup
 ```
 
-5. To precompile assets:
+6. Precompile assets:
 ```
 RAILS_ENV=production ./bin/rake assets:precompile
 ```
 
-6. To launch server:
+7. Launch server:
 ```
 RAILS_ENV=production ./bin/rails s
 ```
 
-Visit your server at port 3000 to view the project!
+Visit your server at port `3000` to view the project!
+
+> If you want to deploy with Nginx + Passenger then you can check this [guide from Gorails](https://gorails.com/deploy/ubuntu/18.04)
+
+## Windows
+1. Setup [Windows environment](setup-environment.html#windows).
+2. Follow steps ```2-7``` from [Ubuntu deployment guide](deployment.html#ubuntu).

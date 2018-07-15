@@ -38,7 +38,8 @@ module.exports = {
       '/docs/authentication',
       '/docs/demo',
       '/docs/deployment',
-      '/docs/development'
+      '/docs/development',
+      '/docs/setup-environment'
     ]
   }
 }
