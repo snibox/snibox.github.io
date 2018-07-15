@@ -32,13 +32,13 @@
         <div class="feature">
           <h2>Self-hosted</h2>
           <p>Many ways to deploy including <a href="https://github.com/snibox/snibox-docker" target="_blank">Docker</a>,
-            easy deploy to <a href="https://snibox.github.io/docs/deployment.html#heroku" target="_blank">Heroku</a>
-            and classic deploy to <a href="https://snibox.github.io/docs/deployment.html#ubuntu" target="_blank">Ubuntu</a>.
+            easy deployment to <a href="https://snibox.github.io/docs/deployment.html#heroku" target="_blank">Heroku</a>
+            and classic deployment to <a href="https://snibox.github.io/docs/deployment.html#ubuntu" target="_blank">Ubuntu</a>.
           </p>
         </div>
         <div class="feature">
           <h2>Simple attractive UI</h2>
-          <p>Label-oriented interface. Supports various programming languages, markdown, plain text.</p>
+          <p>Label-oriented interface with search. Supports various programming languages, markdown, plain text.</p>
         </div>
       </div>
 
