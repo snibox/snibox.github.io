@@ -41,7 +41,13 @@ cp .env.production.sample .env
 rake secret
 ```
 
-4. Insert into `.env` file generated secret and adjust database credentials if needed.
+4. Configure `.env` file:  
+- insert generated secret 
+- uncomment this line if you want to serve static files through Rails:
+```
+RAILS_SERVE_STATIC_FILES=enabled
+```
+- adjust database credentials if needed
 
 5. Setup database:
 ```
