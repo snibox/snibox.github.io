@@ -8,14 +8,14 @@
 brew install rbenv ruby-build postgresql yarn
 ```
 
-3. Install ruby 2.5.1:
+3. Install ruby 2.6.1:
 ```
-rbenv install 2.5.1
+rbenv install 2.6.1
 ```
 
-4. Set ruby global version to 2.5.1:
+4. Set ruby global version to 2.6.1:
 ```
-rbenv global 2.5.1
+rbenv global 2.6.1
 ```
 
 5. Install ```bundler```:
@@ -60,14 +60,14 @@ sudo apt-get install -y build-essential git nodejs postgresql postgresql-contrib
 
 5. Install [ruby-build](https://github.com/rbenv/ruby-build).
 
-6. Install ruby 2.5.1:
+6. Install ruby 2.6.1:
 ```
-rbenv install 2.5.1
+rbenv install 2.6.1
 ```
 
-7. Set ruby global version to 2.5.1:
+7. Set ruby global version to 2.6.1:
 ```
-rbenv global 2.5.1
+rbenv global 2.6.1
 ```
 
 8. Install ```bundler```:
