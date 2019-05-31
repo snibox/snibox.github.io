@@ -17,7 +17,7 @@
           <router-link class="action-button docs" to="/docs/"><span v-html="logos.docs"></span>Docs</router-link>
         </p>
         <img class="animated fadeInUp"
-             src="https://user-images.githubusercontent.com/312873/51252703-8e5ce500-19ad-11e9-88d4-89f4831aa9da.png"
+             src="https://user-images.githubusercontent.com/312873/58736419-6fb03580-8406-11e9-9ae3-986596e0e462.png"
              alt="Image">
       </div>
 
